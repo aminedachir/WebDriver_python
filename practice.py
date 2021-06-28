@@ -12,3 +12,6 @@ email_field.send_keys("dachiramine0@gmail.com")
 password_field = driver.find_element(By.ID, 'password')
 password_field.send_keys("amineamine")
 password_field.send_keys(Keys.ENTER)
+
+multiplication = driver.find_element(By.CSS_SELECTOR, 'body > fieldset > div > a:nth-child(3)')
+multiplication.click()
