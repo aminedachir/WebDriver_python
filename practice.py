@@ -8,9 +8,8 @@ driver.get('http://127.0.0.1:5000/')
 emails = ['amine@gmail.com','mohamed@gmail.com','yassin@gmail.com','ahmed@gmail.com','hichem@gmail.com']
 for i in range(5):
     email = emails[i]
-
-email_field = driver.find_element(By.ID, 'email')
-email_field.send_keys(email)
+    email_field = driver.find_element(By.ID, 'email')
+    email_field.send_keys(email)
 
 
 password_field = driver.find_element(By.ID, 'password')
