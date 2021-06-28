@@ -8,4 +8,4 @@ driver.get('http://amazon.com')
 
 covid = driver.find_element(By.ID, 'swm-link')
 print(covid)
- 
+print(type(covid))
