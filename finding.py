@@ -10,3 +10,6 @@ covid = driver.find_element(By.ID, 'swm-link')
 print(covid)
 print(type(covid))
 print(covid.text)
+
+search = driver.find_element(By.ID, 'twotabsearchtextbox')
+search.send_keys("amine dachir")
