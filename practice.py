@@ -6,4 +6,5 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 driver.get('http://127.0.0.1:5000/')
 
 input_field = driver.find_element(By.ID, 'email')
+input_field.send_keys("dachiramine0@gmail.com")
 print(input_field)
