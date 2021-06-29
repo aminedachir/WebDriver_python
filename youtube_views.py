@@ -12,8 +12,10 @@ watch_vedio.click()
 for i in range(100):
     time_vedio = driver.find_element(By.CSS_SELECTOR, '#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > div.ytp-time-display.notranslate > span.ytp-time-duration')
     timevd = time_vedio.text
-    time_vedio2 = drive.find_element(By.CSS_SELECTOR, '#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > div.ytp-time-display.notranslate > span.ytp-time-current')
+    time_vedio2 = driver.find_element(By.CSS_SELECTOR, '#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > div.ytp-time-display.notranslate > span.ytp-time-current')
     timevd2 = time_vedio2.text
+    print(timevd2)
+    print(timevd)
     if timevd == timevd2:
         driver.refresh()
     #if int(timevd[2:4] > 0):
