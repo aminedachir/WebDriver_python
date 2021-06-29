@@ -8,7 +8,6 @@ driver.get('http://demostore.supersqa.com')
 
 all_product = driver.find_elements(By.CLASS_NAME, 'product')
 print(len(all_product))
-pdb.set_trace()
 
 for product in all_product:
     price_elm = product.find_element(By.CSS_SELECTOR, 'span.amount')
