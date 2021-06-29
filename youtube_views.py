@@ -17,9 +17,10 @@ for i in range(100):
     print(timevd2)
     print(timevd)
     if timevd == timevd2:
+        time.sleep(1)
         driver.refresh()
 
-        
+
     #if int(timevd[2:4] > 0):
         #r = int(timevd[0:2])
     #else:
