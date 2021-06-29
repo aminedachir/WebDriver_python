@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver')
 
 driver.get('http://127.0.0.1:5000/')
+driver.implicitly_wait(10)
 emails = ['amine@gmail.com','mohamed@gmail.com','yassin@gmail.com','ahmed@gmail.com','hichem@gmail.com']
 for i in range(5):
     email = emails[i]
