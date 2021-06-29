@@ -14,4 +14,5 @@ timevd = time_vedio.text
 print(timevd)
 watch_vedio.click()
 time.sleep(timevd)
+driver.refresh()
 
