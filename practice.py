@@ -23,5 +23,6 @@ for i in range(5):
 
 #password_field.send_keys(Keys.ENTER)
 
-multiplication = driver.find_element(By.CSS_SELECTOR, 'body > fieldset > div > a:nth-child(3)')
-multiplication.click()
+
+time.sleep(3)
+driver.quit()
