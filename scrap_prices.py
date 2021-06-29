@@ -8,9 +8,9 @@ driver.get('http://demostore.supersqa.com')
 all_product = driver.find_elements(By.CLASS_NAME, 'product')
 print(len(all_product))
 
-for i in all_product:
-    price_elm = driver.find_element(By.CSS_SELECTOR, 'span.amount')
+for product in all_product:
+    price_elm = product.find_element(By.CSS_SELECTOR, 'span.amount')
     price = price_elm.text
 
-    name_elm = driver.find_element(By.CSS_SELECTOR, 'h2.woocommerce-loop-product__title')
+    name_elm = product.find_element(By.CSS_SELECTOR, 'h2.woocommerce-loop-product__title')
     name = name_elm.text
