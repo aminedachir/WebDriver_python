@@ -7,7 +7,6 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 
 driver.get('http://127.0.0.1:5000/')
 time.sleep(1)
-
 emails = ['amine@gmail.com','mohamed@gmail.com','yassin@gmail.com','ahmed@gmail.com','hichem@gmail.com']
 for i in range(5):
     email = emails[i]
@@ -19,10 +18,6 @@ for i in range(5):
     time.sleep(0.5)
     email_field.send_keys(Keys.ENTER)
     time.sleep(0.5)
-    driver.refresh()
 
-#password_field.send_keys(Keys.ENTER)
-
-
-time.sleep(3)
+time.sleep(1)
 driver.quit()
