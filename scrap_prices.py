@@ -5,4 +5,4 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 
 driver.get('http://demostore.supersqa.com')
 
-#all_product
+all_product = driver.find_elements(By.CLASS_NAME, 'product')
