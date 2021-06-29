@@ -14,3 +14,5 @@ for product in all_product:
 
     name_elm = product.find_element(By.CSS_SELECTOR, 'h2.woocommerce-loop-product__title')
     name = name_elm.text
+
+    print(name, price)
