@@ -15,3 +15,5 @@ time_vedio = driver.find_element(By.CSS_SELECTOR, '#movie_player > div.ytp-chrom
 timevd = time_vedio.text
 print(timevd)
 watch_vedio.click()
+time.sleep(timevd)
+
