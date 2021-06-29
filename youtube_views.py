@@ -18,6 +18,8 @@ for i in range(100):
     print(timevd)
     if timevd == timevd2:
         driver.refresh()
+
+        
     #if int(timevd[2:4] > 0):
         #r = int(timevd[0:2])
     #else:
