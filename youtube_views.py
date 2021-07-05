@@ -4,7 +4,9 @@ from selenium.webdriver.common.by import By
 import time
 
 driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver')
-driver.get('https://www.youtube.com/watch?v=2-Zfr84-H7s')
+
+youtube_vedio_url = input("enter your url vedio :")
+driver.get(youtube_vedio_url)
 watch_vedio = driver.find_element(By.CSS_SELECTOR, '#movie_player > div.ytp-cued-thumbnail-overlay > button')
 watch_vedio.click()
 for i in range(100):
