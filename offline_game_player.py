@@ -7,6 +7,5 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 
 driver.get('http://fb.com')
 time.sleep(3)
-#for i in range (10):
-    #dayn = driver.find_element(By.CLASS_NAME, "runner-canvas")
-print(current_url)
+for i in range (10):
+    dayn = driver.find_element(By.CLASS_NAME, "runner-canvas")
