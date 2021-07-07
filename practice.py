@@ -13,7 +13,7 @@ for i in range(5):
     email_field.send_keys(email)
     time.sleep(0.5)
     password_field = driver.find_element(By.ID, 'password')
-    password_field.send_keys("admin")
+    password_field.send_keys("amineamine")
     time.sleep(0.5)
     email_field.send_keys(Keys.ENTER)
     time.sleep(0.5)
