@@ -7,7 +7,7 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 driver.get('http://127.0.0.1:5000/')
 time.sleep(1)
 emails = ['admin','mohamed@gmail.com','yassin@gmail.com','ahmed@gmail.com','hichem@gmail.com']
-for i in range(5):
+for i in range(6):
     email = emails[i]
     email_field = driver.find_element(By.ID, 'email')
     email_field.send_keys(email)
