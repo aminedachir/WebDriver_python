@@ -20,4 +20,3 @@ submit.click()
  time.sleep(4)
 text = driver.find_element(By.CSS_SELECTOR, '#challenges > div > h1')
 print(text.text)
-
