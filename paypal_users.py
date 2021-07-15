@@ -10,3 +10,4 @@ phone_number = input("Enter a phone number : ")
 phone_number_input = driver.find_element(By.CSS_SELECTOR, '#email')
 phone_number_input.send_keys(phone_number)
 
+submit = driver.find_element(By.CSS_SELECTOR, '#btnNext')
