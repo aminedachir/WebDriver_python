@@ -18,5 +18,9 @@ phone_number_input.send_keys(phone_number)
 submit = driver.find_element(By.CSS_SELECTOR, '#content > div:nth-child(1) > div > form > div.action > input')
 submit.click()
 time.sleep(4)
-text = driver.find_element(By.CSS_SELECTOR, '#challenges > div > h1')
-print(text.text)
+
+try:
+    text = driver.find_element(By.CSS_SELECTOR, '#challenges > div > h1')
+    print("True")
+except NoSuchElementException:
+    print("false")
