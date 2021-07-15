@@ -24,3 +24,6 @@ try:
     print("True")
 except NoSuchElementException:
     print("false")
+
+time.sleep(3)
+
