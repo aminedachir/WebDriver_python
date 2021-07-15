@@ -15,5 +15,5 @@ phone_number_input.send_keys(phone_number)
 submit = driver.find_element(By.CSS_SELECTOR, '#content > div:nth-child(1) > div > form > div.action > input')
 submit.click()
 
-
+text = driver.find_element(By.CSS_SELECTOR, '#challenges > div > h1')
 
