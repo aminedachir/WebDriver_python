@@ -12,3 +12,6 @@ phone_number_input.send_keys(phone_number)
 
 submit = driver.find_element(By.CSS_SELECTOR, '#btnNext')
 submit.click()
+
+forget_password = driver.find_element(By.CSS_SELECTOR, '#forgotPassword')
+forget_password.click()
