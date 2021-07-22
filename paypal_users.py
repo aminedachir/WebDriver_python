@@ -1,13 +1,8 @@
-import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.common.exceptions import NoSuchElementException
-
-
 driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver')
-
 for i in range(100):
     driver.get('https://www.paypal.com/authflow/password-recovery/?country.x=DZ&locale.x=en_US&redirectUri=%252Fsignin%253FZ3JncnB0%253D%2526cHJwPXJwdA%253D')
     phone_number = input("Enter a phone number : ")
@@ -22,4 +17,3 @@ for i in range(100):
     except NoSuchElementException:
         print("false")
     time.sleep(1)
-
