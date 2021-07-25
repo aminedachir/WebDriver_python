@@ -27,5 +27,6 @@ try:
     time.sleep(1)
 except NoSuchElementException:
     print("No resulte found")
+    time.sleep(1)
 
-driver.get('https://uae.yallamotor.com/')
+##driver.get('https://uae.yallamotor.com/')
