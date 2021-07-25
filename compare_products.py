@@ -28,5 +28,5 @@ try:
 except NoSuchElementException:
     print("No resulte found")
     time.sleep(1)
-
+driver.quit()
 ##driver.get('https://uae.yallamotor.com/')
