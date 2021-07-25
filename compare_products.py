@@ -13,7 +13,7 @@ search_for_product = driver.find_element(By.CLASS_NAME, 'Searchbox__keyword__inp
 search_for_product.send_keys(product)
 search_for_product.send_keys(Keys.ENTER)
 
-price = driver.find_element(By.CSS_SELECTOR, '#results-list > div:nth-child(1) > div > div.listing-item > div.block.item-title > div > span')
+price = driver.find_element(By.CSS_SELECTOR, '//*[@id="results-list"]/div[1]/div/div[2]/div[1]/div/span')
 print(price.text)
 year = driver.find_element(By.XPATH, '//*[@id="results-list"]/div[1]/div/div[2]/div[2]/div[2]/ul/li[2]/ul[1]/li[1]')
 print(year.text)
@@ -21,4 +21,5 @@ color = driver.find_element(By.XPATH, '//*[@id="results-list"]/div[1]/div/div[2]
 print(color.text)
 kilometers = driver.find_element(By.XPATH, '//*[@id="results-list"]/div[1]/div/div[2]/div[2]/div[2]/ul/li[2]/ul[1]/li[2]')
 print(kilometers.text)
-#doors =
+doors = driver.find_element(By.XPATH, '//*[@id="results-list"]/div[1]/div/div[2]/div[2]/div[2]/ul/li[2]/ul[2]/li[1]')
+print(doors.text)
