@@ -7,7 +7,7 @@ driver = webdriver.Chrome(executable_path = '/home/amine/Downloads/chromedriver'
 
 product = input("complete name of product :")
 
-driver.get("https://www.Overstock.com/")
+driver.get("https://dubai.dubizzle.com/")
 time.sleep(2)
 
 pub1 = driver.find_element(By.CSS_SELECTOR, '#notification_allow')
