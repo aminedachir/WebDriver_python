@@ -11,6 +11,8 @@ model = input("Model of car :")
 
 driver.get("https://dubai.dubizzle.com/")
 
+motors = driver.find_element(By.CSS_SELECTOR, '#content-wrapper > div.Homepage > div.Hero__container > div > div.Searchbox__top.cf > div:nth-child(3)')
+motors.click()
 search_for_product = driver.find_element(By.CLASS_NAME, 'Searchbox__keyword__input')
 search_for_product.send_keys(car," ", model)
 search_for_product.send_keys(Keys.ENTER)
@@ -24,6 +26,6 @@ try:
     print("Price :",price.text,",", year.text,",", color.text,",", kilometers.text,",", doors.text)
     time.sleep(1)
 except NoSuchElementException:
-    print("No resulte fond")
+    print("No resulte found")
 
 driver.get('https://uae.yallamotor.com/')
