@@ -9,7 +9,5 @@ product = input("complete name of product :")
 
 driver.get("https://dubai.dubizzle.com/")
 
-search_for_product = driver.find_element(By.CLASS_NAME, 'search-key')
+search_for_product = driver.find_element(By.CLASS_NAME, 'Searchbox__keyword__input')
 search_for_product.send_keys(product)
-
-
