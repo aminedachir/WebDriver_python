@@ -26,14 +26,6 @@ year  = driver.find_element(By.NAME,"birthday_year")
 select_year = Select(year)
 select_year.select_by_value("1999")
 
-#input_element = driver.find_element(By.NAME,"firstname")
-#input_element.send_keys("abdelghani")
-
-#input_element = driver.find_element(By.NAME,"pass")
-
-#input_element = driver.find_element(By.NAME,"_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy")
-#input_element.click()
-
 time.sleep(10000)
 
 driver.quit()
