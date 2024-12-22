@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 import time
 
-service = Service(executable_path="chromedriver")
+service = Service(executable_path="/home/aminedachir/Documents/chromedriver")
 driver = webdriver.Chrome(service=service)
 
 driver.get("https://www.facebook.com/r.php?entry_point=login")
@@ -25,6 +25,9 @@ select_month.select_by_value("9")
 year  = driver.find_element(By.NAME,"birthday_year")
 select_year = Select(year)
 select_year.select_by_value("1999")
+
+gender = driver.find_elements(By.CLASS_NAME, "_8esa")
+gender[1].click()
 
 time.sleep(10000)
 
