@@ -3,6 +3,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 service = Service(executable_path="/home/aminedachir/Documents/chromedriver")
@@ -39,13 +41,26 @@ password.send_keys("By@moi005")
 signup = driver.find_element(By.NAME,"websubmit")
 signup.click()
 
-#try:
- #   continu = driver.find_element(By.CLASS_NAME,"x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x1ypdohk xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1o1ewxj x3x9cwd x1e5q0jg x13rtm0m x87ps6o x1lku1pv x1a2a7pz x9f619 x3nfvp2 xdt5ytf xl56j7k x1n2onr6 xh8yej3")
-  #  print("we found a capatcha problem \n please enter the capatcha")
-#except NoSuchElementException:
- #   print("no")
+def verif(val=3):
+    if val <= 0:
+        return
+    try:
+        verification = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.XPATH,'//*[@id="code_in_cliff"]'))
+        )
+        verification.send_keys("hello")
+        print("Text entered successfully!")
+        driver.execute_script("window.open('https://gmail.com');")
+        email_ver = driver.find_element(By.XPATH,'//*[@id="identifierId"]')
+        email_ver.send_keys("aminedachri07@gmail.com")
+        time.sleep(2) 
+    except NoSuchElementException:
+        time.sleep(2) 
+        verif(val - 1)
 
-time.sleep(10)
+verif()
+
+time.sleep(100)
 
 
 driver.quit()
