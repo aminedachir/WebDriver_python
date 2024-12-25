@@ -41,26 +41,26 @@ password.send_keys("By@moi005")
 signup = driver.find_element(By.NAME,"websubmit")
 signup.click()
 
-def verif(val=3):
-    if val <= 0:
-        return
-    try:
-        verification = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH,'//*[@id="code_in_cliff"]'))
-        )
-        verification.send_keys("hello")
-        print("Text entered successfully!")
-        driver.execute_script("window.open('https://gmail.com');")
-        email_ver = driver.find_element(By.XPATH,'//*[@id="identifierId"]')
-        email_ver.send_keys("aminedachri07@gmail.com")
-        time.sleep(2) 
-    except NoSuchElementException:
-        time.sleep(2) 
-        verif(val - 1)
-
-verif()
-
+try:
+  verification = WebDriverWait(driver, 30).until(
+      EC.presence_of_element_located((By.XPATH,'//*[@id="code_in_cliff"]'))
+  )
+  verification.send_keys("hello")
+  print("Text entered successfully!")
+  driver.execute_script("window.open('https://gmail.com');")
+  try:
+    email_ver = WebDriverWait(driver, 30).until(
+      EC.presence_of_element_located((By.XPATH,'//*[@id="identifierId"]'))
+    )
+    email_ver.send_keys("aminedachri07@gmail.com")
+    next_ = driver.find_element(By.XPATH,'//*[@id="identifierNext"]/div/button/span')
+    next_.click()
+  except NoSuchElementException:
+    time.sleep(2)
+    print("no") 
+except NoSuchElementException:
+  time.sleep(2) 
+  print("no")
 time.sleep(100)
-
 
 driver.quit()
