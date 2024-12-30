@@ -48,16 +48,15 @@ try:
   verification.send_keys("hello")
   print("Text entered successfully!")
   driver.execute_script("window.open('https://gmail.com');")
-  try:
-    email_ver = WebDriverWait(driver, 30).until(
-      EC.presence_of_element_located((By.XPATH,'//*[@id="identifierId"]'))
-    )
-    email_ver.send_keys("aminedachri07@gmail.com")
-    next_ = driver.find_element(By.XPATH,'//*[@id="identifierNext"]/div/button/span')
-    next_.click()
-  except NoSuchElementException:
-    time.sleep(2)
-    print("no") 
+  gmail_window = driver.window_handles
+  driver.switch_to.window(gmail_window[1])
+  print(driver.title)
+  email_ver = WebDriverWait(driver, 30).until(
+    EC.presence_of_element_located((By.XPATH,'//*[@id="identifierId"]'))
+  )
+  email_ver.send_keys("fadilabeauty16@gmail.com")
+  next_ = driver.find_element(By.XPATH,'//*[@id="identifierNext"]/div/button/span')
+  next_.click()
 except NoSuchElementException:
   time.sleep(2) 
   print("no")
