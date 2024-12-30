@@ -78,7 +78,7 @@ try:
 
     WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.XPATH, '//*[contains(text(), "Your Facebook verification code")]'))
-    )
+    ) 
     email_body = driver.find_element(By.XPATH, '//*[@class="ii gt"]')  
     email_text = email_body.text
     pin = re.search(r'\d{6}', email_text)  
