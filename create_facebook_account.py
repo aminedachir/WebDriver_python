@@ -54,8 +54,14 @@ try:
   email_ver = WebDriverWait(driver, 30).until(
     EC.presence_of_element_located((By.XPATH,'//*[@id="identifierId"]'))
   )
-  email_ver.send_keys("fadilabeauty16@gmail.com")
+  email_ver.send_keys("aminedachri07@gmail.com")
   next_ = driver.find_element(By.XPATH,'//*[@id="identifierNext"]/div/button/span')
+  next_.click()
+  pass_ver = WebDriverWait(driver,30).until(
+    EC.presence_of_element_located((By.XPATH,'//*[@id="password"]/div[1]/div/div[1]/input'))
+  )
+  pass_ver.send_keys("hello")
+  next_ = driver.find_element(By.CLASS_NAME,"VfPpkd-vQzf8d")
   next_.click()
 except NoSuchElementException:
   time.sleep(2) 
