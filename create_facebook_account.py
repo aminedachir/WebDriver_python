@@ -46,9 +46,8 @@ try:
     verification = WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.XPATH, '//*[@id="code_in_cliff"]'))
     )
-    verification.send_keys("hello")
-    print("Text entered successfully!")
-    
+
+
     driver.execute_script("window.open('https://gmail.com');")
     gmail_window = driver.window_handles
     driver.switch_to.window(gmail_window[1])
@@ -66,7 +65,7 @@ try:
     pass_ver.send_keys("@Descret00")
     next_ = driver.find_element(By.CLASS_NAME, "VfPpkd-vQzf8d")
     next_.click()
-    
+
     WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.XPATH, '//div[@class="aH5"]'))
     )
@@ -96,6 +95,6 @@ try:
         print("No PIN found in the email.")
 except NoSuchElementException:
     print("Captcha detected")
-    time.sleep(2) 
+
 time.sleep(100) 
 driver.quit()
